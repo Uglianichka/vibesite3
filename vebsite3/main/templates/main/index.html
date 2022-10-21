@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1>Главная страница</h1>
+    {% for el in tasks %}
+    <div class ="alert alert-warning mt-2">
+        <h3>{{ el.title }}</h3>
+        <p>{{ el.task }}</p>
+        <h4>{{ el.text }}</h4>
+        <img class="card-img-top" src="../static/img/1592990176.jpg" alt="Картинка">
+    </div>
+    {% endfor %}
+{% endblock %}
